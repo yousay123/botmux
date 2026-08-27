@@ -74,6 +74,8 @@ describe('plugin MCP Gateway', () => {
       Object.entries(process.env).filter((entry): entry is [string, string] => entry[1] !== undefined),
     );
     delete env.SESSION_DATA_DIR;
+    delete env.BOTMUX_MCP_GATEWAY_REQUIRED;
+    delete env.BOTMUX_MCP_GATEWAY_SOCKET;
     return {
       ...env,
       HOME: home,
